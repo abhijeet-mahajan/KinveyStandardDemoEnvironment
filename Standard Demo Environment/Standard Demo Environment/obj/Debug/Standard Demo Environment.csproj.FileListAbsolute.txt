@@ -1,0 +1,56 @@
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.dll.config
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.pdb
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard_Demo_Environment.Standard_Demo_Environment.apk
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard_Demo_Environment.Standard_Demo_Environment-Signed.apk
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Kinvey-Utils.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Kinvey-Xamarin-Android.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Kinvey-Xamarin.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\ModernHttpClient.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Newtonsoft.Json.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\OkHttp.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Remotion.Linq.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\RestSharp.Portable.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\SQLite.Net.Async.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\SQLite.Net.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\SQLite.Net.Platform.XamarinAndroid.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\System.Net.Http.Extensions.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\System.Net.Http.Primitives.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.GooglePlayServices.Gcm.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\ModernHttpClient.dll.mdb
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Newtonsoft.Json.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Remotion.Linq.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\System.Net.Http.Extensions.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\System.Net.Http.Primitives.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.dll
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.pdb
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\android\bin\Standard_Demo_Environment.Standard_Demo_Environment.apk
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\accountmanager.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\productmanager.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\taskmanager.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\home.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\authenticate.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\addnewtask.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\task.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\values\strings.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\drawable\icon.png
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\values\styles.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\menu\menu_item.xml
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\drawable\ic_action_refresh.png
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\drawable\ic_action_add.png
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\R.cs.flag
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\uploadflags.txt
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.csprojResolveAssemblyReference.cache
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.dll.mdb
+D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.dll.mdb

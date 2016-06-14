@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:minWidth="300dp"
+    android:minHeight="400dp">
+    <EditText
+        android:id="@+id/newTaskName"
+        android:hint="Task Name"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:paddingLeft="10dp" />
+    <EditText
+        android:id="@+id/newTaskDueDate"
+        android:layout_below="@id/newTaskName"
+        android:hint="Due Date"
+        android:inputType="date"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:paddingLeft="10dp" />
+    <CheckBox
+        android:id="@+id/newTaskStatus"
+        android:layout_below="@id/newTaskDueDate"
+        android:text="Is Task Complete"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_width="200dp"
+        android:layout_height="50dp" />
+    <Button
+        android:id="@+id/saveNewTask"
+        android:layout_below="@id/newTaskStatus"
+        android:text="Save"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="15dp" />
+<!--<Button
+        android:layout_below="@id/saveNewTask"
+        android:id="@+id/cancelNewTask"
+        android:text="Cancel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp" />-->
+</RelativeLayout>
