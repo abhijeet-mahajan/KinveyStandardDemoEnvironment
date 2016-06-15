@@ -15,11 +15,11 @@ namespace Standard_Demo_Environment
 {
     public class TaskResourceManager
     {
-        public AsyncAppData<Task> TaskAppData
+        public DataStore<Task> TaskAppData
         {
             get
             {
-                return KinveyClient.GetInstance().AppData<Task>("todo", typeof(Task));
+                return DataStore<Task>.GetInstance(DataStoreType.NETWORK, "todo", KinveyClient.GetInstance());
             }
         }
 
@@ -29,7 +29,7 @@ namespace Standard_Demo_Environment
 
             try
             {
-                var tasks = await TaskAppData.GetAsync();
+                var tasks = await TaskAppData.FindAsync();
                 foreach (var task in tasks)
                     taskTitles.Add(task.Action);
             }

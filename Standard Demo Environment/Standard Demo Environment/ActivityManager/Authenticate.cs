@@ -90,7 +90,7 @@ namespace Standard_Demo_Environment
         protected override void OnNewIntent(Intent intent)
         {
             base.OnNewIntent(intent);
-            KinveyClient.GetInstance().User().OnOAuthCallbackRecieved(intent);
+            KinveyClient.GetInstance().CurrentUser.OnOAuthCallbackRecieved(intent);
         }
 
         //public async void MICLogin()

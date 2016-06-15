@@ -15,14 +15,14 @@ namespace Standard_Demo_Environment
 {
     public class ProductResourceManager
     {
-        public AsyncAppData<Product> ProductAppData
+        public DataStore<Product> ProductAppData
         {
             get
             {
-                return KinveyClient.GetInstance().AppData<Product>("Products", typeof(Product));
+                //return KinveyClient.GetInstance().AppData<Product>("Products", typeof(Product));
 
                 //                return KinveyClient.GetInstance().AppData<Product>("Products", typeof(Product));
-                //return DataStore<Product>.GetInstance(DataStoreType.NETWORK, "Products", KinveyClient.GetInstance());
+                return DataStore<Product>.GetInstance(DataStoreType.NETWORK, "Products", KinveyClient.GetInstance());
 
 
             }
@@ -36,7 +36,7 @@ namespace Standard_Demo_Environment
             {
                 //var client = 
                 //var productStore = DataStore<Product>.GetInstance(DataStoreType.NETWORK, "Products",client );
-                var products = await ProductAppData.GetAsync();
+                var products = await ProductAppData.FindAsync();
                 foreach (var product in products)
                     productNames.Add(product.Title);
             }

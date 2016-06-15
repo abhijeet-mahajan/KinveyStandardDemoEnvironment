@@ -54,3 +54,59 @@ D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Deb
 D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.csprojResolveAssemblyReference.cache
 D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.dll.mdb
 D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.dll.mdb
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.dll.config
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.pdb
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard_Demo_Environment.Standard_Demo_Environment.apk
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard_Demo_Environment.Standard_Demo_Environment-Signed.apk
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Kinvey-Utils.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Kinvey-Xamarin-Android.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Kinvey-Xamarin.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Microsoft.Threading.Tasks.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Microsoft.Threading.Tasks.Extensions.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\ModernHttpClient.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Newtonsoft.Json.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\OkHttp.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Remotion.Linq.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\RestSharp.Portable.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\SQLite.Net.Async.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\SQLite.Net.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\SQLite.Net.Platform.XamarinAndroid.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\System.Net.Http.Extensions.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\System.Net.Http.Primitives.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.Android.Support.Animated.Vector.Drawable.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.Android.Support.v4.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.Android.Support.v7.AppCompat.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.Android.Support.v7.MediaRouter.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.Android.Support.Vector.Drawable.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.GooglePlayServices.Base.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.GooglePlayServices.Basement.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Xamarin.GooglePlayServices.Gcm.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Microsoft.Threading.Tasks.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Microsoft.Threading.Tasks.Extensions.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\ModernHttpClient.dll.mdb
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Newtonsoft.Json.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Remotion.Linq.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\System.Net.Http.Extensions.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\System.Net.Http.Primitives.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.dll
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.pdb
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\android\bin\Standard_Demo_Environment.Standard_Demo_Environment.apk
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\accountmanager.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\productmanager.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\taskmanager.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\home.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\authenticate.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\addnewtask.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\task.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\values\strings.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\drawable\icon.png
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\values\styles.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\menu\menu_item.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\drawable\ic_action_refresh.png
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\drawable\ic_action_add.png
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\R.cs.flag
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\uploadflags.txt
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.csprojResolveAssemblyReference.cache
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.dll.mdb
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.dll.mdb

@@ -19,12 +19,12 @@ namespace Standard_Demo_Environment
         {
             try
             {
-                if (KinveyClient.GetInstance().User().isUserLoggedIn())
+                if (KinveyClient.GetInstance().CurrentUser.isUserLoggedIn())
                 {
                     Logout();
                 }
 
-                var user = await KinveyClient.GetInstance().User().LoginAsync(username, password);
+                var user = await KinveyClient.GetInstance().CurrentUser.LoginAsync(username, password);
                 if (user != null)
                     return true;
                 else
@@ -66,7 +66,7 @@ namespace Standard_Demo_Environment
         {
             try
             {
-                KinveyClient.GetInstance().User().Logout();
+                KinveyClient.GetInstance().CurrentUser.Logout();
                 return true;
             }
             catch (Exception e)

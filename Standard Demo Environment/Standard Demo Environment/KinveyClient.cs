@@ -31,13 +31,13 @@ namespace Standard_Demo_Environment
             {
                 kinveyClient = new Client.Builder(appkey, appSecret).build();
 
-    //            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                //            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
 
-    //            kinveyClient = new Client.Builder(appkey, appSecret)
-    //.setLogger(delegate (string msg) { Console.WriteLine($"KINVEY{msg}"); })
-    //.setFilePath(path)
-    //.setOfflinePlatform(new SQLitePlatformAndroid())
-    //.build();
+                //            kinveyClient = new Client.Builder(appkey, appSecret)
+                //.setLogger(delegate (string msg) { Console.WriteLine($"KINVEY{msg}"); })
+                //.setFilePath(path)
+                //.setOfflinePlatform(new SQLitePlatformAndroid())
+                //.build();
 
                 return kinveyClient;
             }
