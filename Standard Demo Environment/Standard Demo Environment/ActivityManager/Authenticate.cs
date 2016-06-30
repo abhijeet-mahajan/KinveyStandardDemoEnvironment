@@ -19,8 +19,8 @@ namespace Standard_Demo_Environment
     [Activity(Label = "Kinvey", MainLauncher = true, Icon = "@drawable/icon", Theme = "@style/MyTheme")]
     [IntentFilter(new[] { Intent.ActionView },
         Categories = new[] { Intent.CategoryDefault, "android.intent.category.BROWSABLE" },
-        DataScheme = "http://localhost:8100")]
-    public class Authenticate : ActionBarActivity
+        DataScheme = "myredirecturi")]
+    public class Authenticate : AppCompatActivity
     {
         private EditText Username;
         private EditText Password;
@@ -55,28 +55,39 @@ namespace Standard_Demo_Environment
 
             AuthenticationManager.Logout();
 
-             isLoginSuccessful = await AuthenticationManager.Login(username, password);
-
-            if (isLoginSuccessful)
-                AfterSuccessfulLogin();
-            else
-                Toast.MakeText(this, "Could Not Login", ToastLength.Short).Show();
-
-
-            //isLoginSuccessful = await AuthenticationManager.Login("ab", "ab");
-
-            //try
-            //{
-            //    this.MICLogin();
+            //isLoginSuccessful = await AuthenticationManager.Login(username, password);
+            //if (isLoginSuccessful)
             //    AfterSuccessfulLogin();
-            //}
-            //catch
-            //{
+            //else
             //    Toast.MakeText(this, "Could Not Login", ToastLength.Short).Show();
 
-            //}
+
+            //            isLoginSuccessful = await AuthenticationManager.Login(this);
 
 
+            KinveyClient.GetInstance().CurrentUser.LoginWithAuthorizationCodeLoginPage("myredirecturi://", new KinveyMICDelegate<User>
+            {
+                onSuccess = (user) => {
+                    Toast.MakeText(this, "Login Successful", ToastLength.Short).Show();
+
+                    Intent loginIntent = new Intent(this, typeof(Home));
+                    this.StartActivity(loginIntent);
+                },
+                onError = (exception) => { Toast.MakeText(this, "Could Not Login", ToastLength.Short).Show(); },
+                onReadyToRender = (renderURL) =>
+                {
+                    var uri = Android.Net.Uri.Parse(renderURL);
+                    var intent = new Intent(Intent.ActionView, uri);
+                    this.StartActivity(intent);
+                }
+            });
+
+
+            //var url = await KinveyClient.GetInstance().CurrentUser.LoginWithAuthorizationCodeLoginPage("http://localhost:8100",new KinveyMICDelegate<User>;
+            //var uri = Android.Net.Uri.Parse(url);
+
+            //var intent = new Intent(Intent.ActionView, uri);
+            //this.StartActivity(intent);
         }
 
         private void AfterSuccessfulLogin()
@@ -86,6 +97,7 @@ namespace Standard_Demo_Environment
             Intent loginIntent = new Intent(this, typeof(Home));
             this.StartActivity(loginIntent);
         }
+
 
         protected override void OnNewIntent(Intent intent)
         {

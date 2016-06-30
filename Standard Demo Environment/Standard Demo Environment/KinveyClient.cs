@@ -27,20 +27,26 @@ namespace Standard_Demo_Environment
 
         public static Client GetInstance()
         {
+
+
             if (kinveyClient == null)
             {
-                kinveyClient = new Client.Builder(appkey, appSecret).build();
 
-                //            var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+                kinveyClient = new Client.Builder(appkey, appSecret)
+                                .setLogger(delegate (string msg) { Console.WriteLine($"KINVEY{msg}"); })
+                                .setFilePath(path)
+                                .setOfflinePlatform(new SQLitePlatformAndroid())
+                                .build();
 
-                //            kinveyClient = new Client.Builder(appkey, appSecret)
-                //.setLogger(delegate (string msg) { Console.WriteLine($"KINVEY{msg}"); })
-                //.setFilePath(path)
-                //.setOfflinePlatform(new SQLitePlatformAndroid())
-                //.build();
+                kinveyClient.MICApiVersion = "v2";
 
-                return kinveyClient;
             }
+
+            //    kinveyClient = new Client.Builder(appkey, appSecret).build();
+
+            //    return kinveyClient;
+            //}
             return kinveyClient;
         }
     }

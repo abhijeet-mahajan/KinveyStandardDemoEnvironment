@@ -15,11 +15,12 @@ namespace Standard_Demo_Environment
 {
     public class TaskResourceManager
     {
-        public DataStore<Task> TaskAppData
+        public DataStore<todo> TaskStore
         {
             get
             {
-                return DataStore<Task>.GetInstance(DataStoreType.NETWORK, "todo", KinveyClient.GetInstance());
+                var task= DataStore<todo>.GetInstance(DataStoreType.NETWORK, "todo", KinveyClient.GetInstance());
+                return task;
             }
         }
 
@@ -29,9 +30,17 @@ namespace Standard_Demo_Environment
 
             try
             {
-                var tasks = await TaskAppData.FindAsync();
-                foreach (var task in tasks)
-                    taskTitles.Add(task.Action);
+                KinveyObserver<todo> observer = new KinveyObserver<todo>()
+                {
+                    onSuccess = (tasks) => {
+                        foreach (var task in tasks)
+                            taskTitles.Add(task.Title);
+                    },
+                    onError = (e) => Console.WriteLine(e.Message),
+                    onCompleted = () => Console.WriteLine("completed")
+                };
+
+                await TaskStore.FindAsync(observer);
             }
             catch (Exception e)
             {
@@ -40,13 +49,13 @@ namespace Standard_Demo_Environment
             return await System.Threading.Tasks.Task.Run(() => taskTitles);
         }
 
-        public async System.Threading.Tasks.Task<Task> CreateNewTask(Task task)
+        public async System.Threading.Tasks.Task<todo> CreateNewTask(todo task)
         {
-            Task createdTask = null;
+            todo createdTask = null;
 
             try
             {
-                createdTask = await TaskAppData.SaveAsync(task);
+                createdTask = await TaskStore.SaveAsync(task);
             }
             catch (Exception e)
             {

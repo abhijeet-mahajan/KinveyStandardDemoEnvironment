@@ -19,27 +19,32 @@ namespace Standard_Demo_Environment
         {
             get
             {
-                //var a = KinveyClient.GetInstance().AppData<Account>("Account", DataStoreType.SYNC);
+                return DataStore<Account>.GetInstance(DataStoreType.NETWORK, "Account", KinveyClient.GetInstance());
 
-                var a = DataStore<Account>.GetInstance( DataStoreType.NETWORK, "Account", KinveyClient.GetInstance());
-                return a;
+                //var a = KinveyClient.GetInstance().AppData<Account>("Account", DataStoreType.SYNC);
+                //var client = KinveyClient.GetInstance();
+                //var a = DataStore<Account>.GetInstance( DataStoreType.NETWORK, "Account", client);
+                //return a;
             }
         }
 
         public async System.Threading.Tasks.Task<List<string>> GetAllAccountNames()
         {
             List<string> accountNames = new List<string>();
-            List<Account> accounts = new List<Account>();
 
             try
             {
+                KinveyObserver<Account> observer = new KinveyObserver<Account>()
+                {
+                    onSuccess = (accounts) => {
+                        foreach (var account in accounts)
+                            accountNames.Add(account.Name);
+                    },
+                    onError = (e) => Console.WriteLine(e.Message),
+                    onCompleted = () => Console.WriteLine("completed")
+                };
 
-                accounts = await AccountStore.FindAsync();
-
-                //var accounts = await AccountStore.GetAsync();
-
-                foreach (var account in accounts)
-                    accountNames.Add(account.Name);
+                await AccountStore.FindAsync(observer);
             }
             catch (Exception e)
             {

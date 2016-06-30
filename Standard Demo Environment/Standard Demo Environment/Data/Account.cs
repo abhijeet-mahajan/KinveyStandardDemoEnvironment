@@ -22,57 +22,57 @@ namespace Standard_Demo_Environment
         [JsonProperty("accountname")]
         public string Name { get; set; }
 
-        [JsonProperty]
-        public AccountCompany Company { get; set; }
+        //[JsonProperty]
+        //public AccountCompany Company { get; set; }
 
-        [JsonObject]
-        public class AccountCompany
-        {
-            [JsonProperty]
-            public string Name { get; set; }
+        //[JsonObject("accountcompany")]
+        //public class AccountCompany
+        //{
+        //    [JsonProperty]
+        //    public string Name { get; set; }
 
-            [JsonProperty]
-            public string CatchPhrase { get; set; }
+        //    [JsonProperty]
+        //    public string CatchPhrase { get; set; }
 
-            [JsonProperty]
-            public string BS { get; set; }
+        //    [JsonProperty]
+        //    public string BS { get; set; }
 
-        }
+        //}
 
         [JsonProperty]
         public string Email { get; set; }
 
-        [JsonProperty]
-        public AccountAddress Address { get; set; }
+        //[JsonProperty]
+        //public AccountAddress Address { get; set; }
 
-        [JsonObject]
-        public class AccountAddress
-        {
-            [JsonProperty]
-            public string Street { get; set; }
+        //[JsonObject]
+        //public class AccountAddress
+        //{
+        //    [JsonProperty]
+        //    public string Street { get; set; }
 
-            [JsonProperty]
-            public string Suit { get; set; }
+        //    [JsonProperty]
+        //    public string Suit { get; set; }
 
-            [JsonProperty]
-            public string City { get; set; }
+        //    [JsonProperty]
+        //    public string City { get; set; }
 
-            [JsonProperty]
-            public string ZipCode { get; set; }
+        //    [JsonProperty]
+        //    public string ZipCode { get; set; }
 
-            [JsonProperty]
-            public GeoLocation Geo { get; set; }
+        //    [JsonProperty]
+        //    public GeoLocation Geo { get; set; }
 
-            [JsonObject]
-            public class GeoLocation
-            {
-                [JsonProperty]
-                public string Latitude { get; set; }
+        //    [JsonObject]
+        //    public class GeoLocation
+        //    {
+        //        [JsonProperty]
+        //        public string Latitude { get; set; }
 
-                [JsonProperty]
-                public string Longitude { get; set; }
-            }
-        }
+        //        [JsonProperty]
+        //        public string Longitude { get; set; }
+        //    }
+        //}
 
         [JsonProperty]
         public string Phone { get; set; }

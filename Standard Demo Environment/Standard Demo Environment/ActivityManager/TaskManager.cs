@@ -71,7 +71,7 @@ namespace Standard_Demo_Environment
 
         private async void CreateNewTask(object sender, OnAddNewTask e)
         {
-            Task newTask = new Task(e.Action, e.DueDate, e.Status);
+            todo newTask = new todo(e.Action, e.DueDate, e.Status);
 
             TaskResourceManager manager = new TaskResourceManager();
             var createdTask = await manager.CreateNewTask(newTask);

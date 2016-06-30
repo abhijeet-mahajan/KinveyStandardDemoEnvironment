@@ -107,6 +107,5 @@ D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo 
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\drawable\ic_action_add.png
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\R.cs.flag
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\uploadflags.txt
-D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.csprojResolveAssemblyReference.cache
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.dll.mdb
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.dll.mdb

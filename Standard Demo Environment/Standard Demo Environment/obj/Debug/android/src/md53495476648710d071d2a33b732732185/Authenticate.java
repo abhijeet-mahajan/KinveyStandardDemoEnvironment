@@ -2,7 +2,7 @@ package md53495476648710d071d2a33b732732185;
 
 
 public class Authenticate
-	extends android.support.v7.app.ActionBarActivity
+	extends android.support.v7.app.AppCompatActivity
 	implements
 		mono.android.IGCUserPeer
 {

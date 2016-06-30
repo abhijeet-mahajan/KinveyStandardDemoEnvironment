@@ -15,16 +15,11 @@ namespace Standard_Demo_Environment
 {
     public class ProductResourceManager
     {
-        public DataStore<Product> ProductAppData
+        public DataStore<Product> ProductStore
         {
             get
             {
-                //return KinveyClient.GetInstance().AppData<Product>("Products", typeof(Product));
-
-                //                return KinveyClient.GetInstance().AppData<Product>("Products", typeof(Product));
                 return DataStore<Product>.GetInstance(DataStoreType.NETWORK, "Products", KinveyClient.GetInstance());
-
-
             }
         }
 
@@ -34,11 +29,17 @@ namespace Standard_Demo_Environment
 
             try
             {
-                //var client = 
-                //var productStore = DataStore<Product>.GetInstance(DataStoreType.NETWORK, "Products",client );
-                var products = await ProductAppData.FindAsync();
-                foreach (var product in products)
-                    productNames.Add(product.Title);
+                KinveyObserver<Product> observer = new KinveyObserver<Product>()
+                {
+                    onSuccess = (products) => {
+                        foreach (var product in products)
+                            productNames.Add(product.Title);
+                    },
+                    onError = (e) => Console.WriteLine(e.Message),
+                    onCompleted = () => Console.WriteLine("completed")
+                };
+
+                await ProductStore.FindAsync(observer);
             }
             catch (Exception e)
             {

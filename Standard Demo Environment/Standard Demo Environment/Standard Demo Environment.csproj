@@ -43,14 +43,17 @@
     <AndroidLinkMode>SdkOnly</AndroidLinkMode>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Kinvey-Utils">
-      <HintPath>..\packages\Kinvey.3.0.0-mvp01\lib\Kinvey-Utils.dll</HintPath>
+    <Reference Include="Kinvey-Utils, Version=1.0.6018.20959, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kinvey.3.0.0-mvp03\lib\Kinvey-Utils.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Kinvey-Xamarin">
-      <HintPath>..\packages\Kinvey.3.0.0-mvp01\lib\Kinvey-Xamarin.dll</HintPath>
+    <Reference Include="Kinvey-Xamarin, Version=1.0.6024.33567, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kinvey.3.0.0-mvp03\lib\Kinvey-Xamarin.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Kinvey-Xamarin-Android">
-      <HintPath>..\packages\Kinvey-Android.3.0.0-mvp01\lib\Kinvey-Xamarin-Android.dll</HintPath>
+    <Reference Include="Kinvey-Xamarin-Android, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kinvey-Android.3.0.0-mvp03\lib\Kinvey-Xamarin-Android.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.Threading.Tasks, Version=1.0.12.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.Async.1.0.168\lib\portable-net45+win8+wpa81\Microsoft.Threading.Tasks.dll</HintPath>
@@ -78,8 +81,9 @@
       <HintPath>..\packages\Remotion.Linq.2.0.1\lib\portable-net45+win+wpa81+wp80\Remotion.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="RestSharp.Portable">
-      <HintPath>..\packages\Kinvey.3.0.0-mvp01\lib\RestSharp.Portable.dll</HintPath>
+    <Reference Include="RestSharp.Portable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kinvey.3.0.0-mvp03\lib\RestSharp.Portable.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="SQLite.Net, Version=3.1.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\SQLite.Net.Core-PCL.3.1.1\lib\portable-win8+net45+wp8+wpa81+MonoAndroid1+MonoTouch1\SQLite.Net.dll</HintPath>
@@ -143,7 +147,7 @@
     <Compile Include="ActivityManager\Authenticate.cs" />
     <Compile Include="AddNewTask.cs" />
     <Compile Include="Data\Product.cs" />
-    <Compile Include="Data\Task.cs" />
+    <Compile Include="Data\todo.cs" />
     <Compile Include="ActivityManager\AccountManager.cs" />
     <Compile Include="Data\Account.cs" />
     <Compile Include="ActivityManager\CustomActivity.cs" />

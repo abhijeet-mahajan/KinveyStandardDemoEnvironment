@@ -24,7 +24,9 @@ namespace Standard_Demo_Environment
                     Logout();
                 }
 
-                var user = await KinveyClient.GetInstance().CurrentUser.LoginAsync(username, password);
+                var user = await KinveyClient.GetInstance().CurrentUser.LoginAsync("ab", "ab");
+//                var user = await KinveyClient.GetInstance().CurrentUser.LoginAsync(username, password);
+
                 if (user != null)
                     return true;
                 else
@@ -36,29 +38,35 @@ namespace Standard_Demo_Environment
             }
         }
 
-        //public static async System.Threading.Tasks.Task<bool> Login(string username, string password,Activity activity)
-        //{
-        //    var result = false;
-        //    KinveyClient.GetInstance().User().LoginWithAuthorizationCodeLoginPage("http://localhost:8100", new KinveyMICDelegate<User>
-        //    {
-        //        onSuccess = (user) =>
-        //        {
-        //            result = true;
-        //        },
-        //        onError = (error) =>
-        //        {
-        //            result = false;
-        //        },
-        //        OnReadyToRender = (url) =>
-        //        {
-        //            var uri = Android.Net.Uri.Parse(url);
-        //            var intent = new Intent(Intent.ActionView, uri);
-        //            activity.StartActivity(intent);
-        //        }
-        //    });
+        public static async System.Threading.Tasks.Task<bool> Login(Activity activity)
+        {
+            var result = false;
 
-        //    return await System.Threading.Tasks.Task.Run(() => result);
-        //}
+           //var url = await KinveyClient.GetInstance().CurrentUser.LoginWithAuthorizationCodeLoginPage("http://localhost:8100");
+           // var uri = Android.Net.Uri.Parse(url);
+           // var intent = new Intent(Intent.ActionView, uri);
+           // activity.StartActivity(intent);
+
+            //KinveyClient.GetInstance().CurrentUser.LoginWithAuthorizationCodeAPI("http://localhost:8100", new KinveyMICDelegate<User>
+            //{
+            //    onSuccess = (user) =>
+            //    {
+            //        result = true;
+            //    },
+            //    onError = (error) =>
+            //    {
+            //        result = false;
+            //    },
+            //    OnReadyToRender = (url) =>
+            //    {
+            //        var uri = Android.Net.Uri.Parse(url);
+            //        var intent = new Intent(Intent.ActionView, uri);
+            //        activity.StartActivity(intent);
+            //    }
+            //});
+
+            return await System.Threading.Tasks.Task.Run(() => result);
+        }
 
 
 

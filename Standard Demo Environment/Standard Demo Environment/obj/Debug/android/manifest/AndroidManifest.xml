@@ -16,7 +16,7 @@
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="http://localhost:8100" />
+        <data android:scheme="myredirecturi" />
       </intent-filter>
     </activity>
     <activity android:label="Accounts" android:theme="@style/MyTheme" android:name="md53495476648710d071d2a33b732732185.AccountManager" />
