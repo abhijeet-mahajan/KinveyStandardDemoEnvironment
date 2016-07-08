@@ -99,6 +99,7 @@ D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo 
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\authenticate.xml
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\addnewtask.xml
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\task.xml
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\addnewaccount.xml
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\values\strings.xml
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\drawable\icon.png
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\values\styles.xml

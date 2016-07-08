@@ -30,46 +30,14 @@ namespace Standard_Demo_Environment
             base.OnCreate(savedInstanceState);
             SetContentView(Resource.Layout.AccountManager);
 
-                        this.AddToolbar();
-            //
-            //toolbar = FindViewById<SupportToolBar>(Standard_Demo_Environment.Resource.Id.toolbar);
-            //SetSupportActionBar(toolbar);
-
-            //toolbar.MenuItemClick += Toolbar_MenuItemClick;
-            //
-
-
-
+            this.AddToolbar();
             this.AddSlidingDrawer();
-            //
-            //var optionsList = new List<string>();
-            //optionsList.Add("Home");
-            //optionsList.Add("Accounts");
-            //optionsList.Add("Tasks");
-            //optionsList.Add("Products");
-            //optionsList.Add("Logout");
-
-            //var optionsDrawer = FindViewById<ListView>(Resource.Id.leftDrawer);
-            //ArrayAdapter<string> optionsAdapter = new ArrayAdapter<string>(this, Android.Resource.Layout.SimpleListItem1, optionsList);
-            //optionsDrawer.Adapter = optionsAdapter;
-
-            //optionsDrawer.ItemClick += OnOptionSelected;
-            //
-
-
-
-
+            
             accounts = FindViewById<ListView>(Resource.Id.accountsListView);
             accountList = new List<string>();
 
             await DisplayAccountsList();
         }
-
-        //public override bool OnOptionsItemSelected(IMenuItem item)
-        //{
-        //    hamburger.OnOptionsItemSelected(item);
-        //    return base.OnOptionsItemSelected(item);
-        //}
 
         public async System.Threading.Tasks.Task DisplayAccountsList()
         {
@@ -95,7 +63,31 @@ namespace Standard_Demo_Environment
 
         public override void OnAddItemClicked(object sender, SupportToolBar.MenuItemClickEventArgs e)
         {
+            FragmentTransaction transaction = FragmentManager.BeginTransaction();
+            AddNewAccount newAccount = new AddNewAccount();
+            newAccount.Show(transaction, "Add New Task");
+
             base.OnAddItemClicked(sender, e);
+
+            newAccount.createNewAccount += CreateNewAccount;
+        }
+
+        private async void CreateNewAccount(object sender, OnAddNewAccount e)
+        {
+            Account newAccount = new Account(e.AccountName, e.CompanyName);
+
+            AccountResourceManager manager = new AccountResourceManager();
+            var createdAccount = await manager.CreateNewAccount(newAccount);
+
+            if (createdAccount != null)
+            {
+                Toast.MakeText(this, "New Account Created", ToastLength.Short).Show();
+                await DisplayAccountsList();
+            }
+            else
+            {
+                Toast.MakeText(this, "Something went wrong", ToastLength.Short).Show();
+            }
         }
 
     }

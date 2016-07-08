@@ -145,7 +145,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ActivityManager\Authenticate.cs" />
-    <Compile Include="AddNewTask.cs" />
+    <Compile Include="Add New Item\AddNewAccount.cs" />
+    <Compile Include="Add New Item\AddNewTask.cs" />
     <Compile Include="Data\Product.cs" />
     <Compile Include="Data\todo.cs" />
     <Compile Include="ActivityManager\AccountManager.cs" />
@@ -187,6 +188,9 @@
       <SubType>AndroidResource</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Task.axml">
+      <SubType>AndroidResource</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\AddNewAccount.axml">
       <SubType>AndroidResource</SubType>
     </AndroidResource>
   </ItemGroup>

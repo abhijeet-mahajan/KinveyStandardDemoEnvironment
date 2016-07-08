@@ -27,11 +27,20 @@ namespace Standard_Demo_Environment
 
         private SupportToolBar toolbar;
 
-        private Button Login;
+        private Button LoginWithKinvey;
+        private Button LoginWithMIC;
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
+            if (Intent.DataString != null)
+            {
+                if (Intent.DataString.StartsWith("myredirecturi", StringComparison.OrdinalIgnoreCase))
+                {
+                    KinveyClient.GetInstance().CurrentUser.OnOAuthCallbackRecieved(this.Intent);
+                        AfterSuccessfulLogin();
+                }
+            }
             SetContentView(Resource.Layout.Authenticate);
 
             Username = FindViewById<EditText>(Standard_Demo_Environment.Resource.Id.username);
@@ -41,12 +50,14 @@ namespace Standard_Demo_Environment
             SetSupportActionBar(toolbar);
             toolbar.TextAlignment = TextAlignment.Center;
 
-            Login = FindViewById<Button>(Resource.Id.Login);
+            LoginWithKinvey = FindViewById<Button>(Resource.Id.Login);
+            LoginWithKinvey.Click += KinveyLogin;
 
-            Login.Click += BeginLogin;
+            LoginWithMIC = FindViewById<Button>(Resource.Id.MICLogin);
+            LoginWithMIC.Click += MICLogin;
         }
 
-        private async void BeginLogin(object sender, EventArgs e)
+        private async void KinveyLogin(object sender, EventArgs e)
         {
             bool isLoginSuccessful = false;
 
@@ -55,39 +66,32 @@ namespace Standard_Demo_Environment
 
             AuthenticationManager.Logout();
 
-            //isLoginSuccessful = await AuthenticationManager.Login(username, password);
-            //if (isLoginSuccessful)
-            //    AfterSuccessfulLogin();
-            //else
-            //    Toast.MakeText(this, "Could Not Login", ToastLength.Short).Show();
+            //            isLoginSuccessful = await AuthenticationManager.Login("ab","ab");
+            isLoginSuccessful = await AuthenticationManager.Login(username, password);
+            if (isLoginSuccessful)
+                AfterSuccessfulLogin();
+            else
+                AfterLoginFailed();
+        }
 
+        private void MICLogin(object sender, EventArgs e)
+        {
+            AuthenticationManager.Logout();
 
-            //            isLoginSuccessful = await AuthenticationManager.Login(this);
-
-
-            KinveyClient.GetInstance().CurrentUser.LoginWithAuthorizationCodeLoginPage("myredirecturi://", new KinveyMICDelegate<User>
+            var micDelegate = new KinveyMICDelegate<User>
             {
-                onSuccess = (user) => {
-                    Toast.MakeText(this, "Login Successful", ToastLength.Short).Show();
-
-                    Intent loginIntent = new Intent(this, typeof(Home));
-                    this.StartActivity(loginIntent);
-                },
-                onError = (exception) => { Toast.MakeText(this, "Could Not Login", ToastLength.Short).Show(); },
+                onSuccess = (user) => {},
+                onError = (exception) => { AfterLoginFailed(); },
                 onReadyToRender = (renderURL) =>
                 {
                     var uri = Android.Net.Uri.Parse(renderURL);
                     var intent = new Intent(Intent.ActionView, uri);
                     this.StartActivity(intent);
                 }
-            });
+            };
 
+            AuthenticationManager.MICLogin(micDelegate, "myredirecturi://");
 
-            //var url = await KinveyClient.GetInstance().CurrentUser.LoginWithAuthorizationCodeLoginPage("http://localhost:8100",new KinveyMICDelegate<User>;
-            //var uri = Android.Net.Uri.Parse(url);
-
-            //var intent = new Intent(Intent.ActionView, uri);
-            //this.StartActivity(intent);
         }
 
         private void AfterSuccessfulLogin()
@@ -98,38 +102,13 @@ namespace Standard_Demo_Environment
             this.StartActivity(loginIntent);
         }
 
-
-        protected override void OnNewIntent(Intent intent)
+        private void AfterLoginFailed()
         {
-            base.OnNewIntent(intent);
-            KinveyClient.GetInstance().CurrentUser.OnOAuthCallbackRecieved(intent);
+            Toast.MakeText(this, "Could Not Login", ToastLength.Short).Show();
+
+            Intent loginIntent = new Intent(this, typeof(Authenticate));
+            this.StartActivity(loginIntent);
         }
 
-        //public async void MICLogin()
-        //{
-        //    var url = await KinveyClient.GetInstance().User().LoginWithAuthorizationCodeLoginPage("http://localhost:8100");
-        //    var uri = Android.Net.Uri.Parse(url);
-        //    var intent = new Intent(Intent.ActionView, uri);
-        //    StartActivity(intent);
-
-
-
-        //    //{
-        //    //    onSuccess = (user) =>
-        //    //    {
-        //    //        //                    Console.WriteLine("Successful!!");
-        //    //    },
-        //    //    onError = (error) =>
-        //    //    {
-        //    //        //                  Console.WriteLine("Something Went wrong");
-        //    //    },
-        //    //    OnReadyToRender = (url) =>
-        //    //    {
-        //    //        var uri = Android.Net.Uri.Parse(url);
-        //    //        var intent = new Intent(Intent.ActionView, uri);
-        //    //        StartActivity(intent);
-        //    //    }
-        //    //});
-        //}
     }
 }

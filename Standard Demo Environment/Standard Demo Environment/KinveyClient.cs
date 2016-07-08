@@ -17,9 +17,6 @@ namespace Standard_Demo_Environment
 {
     public class KinveyClient
     {
-        //private static readonly string appkey = ConfigurationManager.AppSettings["AppKey"];
-        //private static readonly string appSecret = ConfigurationManager.AppSettings["AppSecret"];
-
         private static readonly string appkey = "kid_Z1ZBnjSuM-";
         private static readonly string appSecret = "af76310fc41444c3876669ad3a155eb0";
 
@@ -27,14 +24,10 @@ namespace Standard_Demo_Environment
 
         public static Client GetInstance()
         {
-
-
             if (kinveyClient == null)
             {
-
                 var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
                 kinveyClient = new Client.Builder(appkey, appSecret)
-                                .setLogger(delegate (string msg) { Console.WriteLine($"KINVEY{msg}"); })
                                 .setFilePath(path)
                                 .setOfflinePlatform(new SQLitePlatformAndroid())
                                 .build();
@@ -42,12 +35,33 @@ namespace Standard_Demo_Environment
                 kinveyClient.MICApiVersion = "v2";
 
             }
-
-            //    kinveyClient = new Client.Builder(appkey, appSecret).build();
-
-            //    return kinveyClient;
-            //}
             return kinveyClient;
+
         }
     }
 }
+//                                .setLogger(delegate (string msg) { Console.WriteLine($"KINVEY{msg}"); })
+
+
+
+
+
+
+//private static readonly string appkey = ConfigurationManager.AppSettings["AppKey"];
+//private static readonly string appSecret = ConfigurationManager.AppSettings["AppSecret"];
+
+
+//if (kinveyClient == null)
+//{
+//    var path = System.Environment.GetFolderPath(System.Environment.SpecialFolder.Personal);
+//    kinveyClient = new Client.Builder(appkey, appSecret)
+//                    .setLogger(delegate (string msg) { Console.WriteLine($"KINVEY{msg}"); })
+//                    .setFilePath(path)
+//                    .setOfflinePlatform(new SQLitePlatformAndroid())
+//                    .build();
+
+//    kinveyClient.MICApiVersion = "v2";
+
+//}
+//return kinveyClient;
+

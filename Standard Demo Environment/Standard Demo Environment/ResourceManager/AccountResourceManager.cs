@@ -10,6 +10,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using KinveyXamarin;
+using SQLite.Net.Platform.XamarinAndroid;
 
 namespace Standard_Demo_Environment
 {
@@ -19,12 +20,9 @@ namespace Standard_Demo_Environment
         {
             get
             {
-                return DataStore<Account>.GetInstance(DataStoreType.NETWORK, "Account", KinveyClient.GetInstance());
-
-                //var a = KinveyClient.GetInstance().AppData<Account>("Account", DataStoreType.SYNC);
-                //var client = KinveyClient.GetInstance();
-                //var a = DataStore<Account>.GetInstance( DataStoreType.NETWORK, "Account", client);
-                //return a;
+                var store = DataStore<Account>.GetInstance(DataStoreType.SYNC, "Account", KinveyClient.GetInstance());
+                //                store.setOffline(null);
+                return store;
             }
         }
 
@@ -34,17 +32,23 @@ namespace Standard_Demo_Environment
 
             try
             {
-                KinveyObserver<Account> observer = new KinveyObserver<Account>()
-                {
-                    onSuccess = (accounts) => {
-                        foreach (var account in accounts)
-                            accountNames.Add(account.Name);
-                    },
-                    onError = (e) => Console.WriteLine(e.Message),
-                    onCompleted = () => Console.WriteLine("completed")
-                };
+                //KinveyObserver<Account> observer = new KinveyObserver<Account>()
+                //{
+                //    onSuccess = (accounts) =>
+                //    {
+                //        foreach (var account in accounts)
+                //            accountNames.Add(account.Name);
+                //    },
+                //    onError = (e) => Console.WriteLine(e.Message),
+                //    onCompleted = () => Console.WriteLine("completed")
+                //};
+                //await AccountStore.FindAsync(observer);
 
-                await AccountStore.FindAsync(observer);
+                var accounts = await AccountStore.PullAsync();
+
+                foreach (var account in accounts)
+                    accountNames.Add(account.Name);
+
             }
             catch (Exception e)
             {
@@ -53,5 +57,27 @@ namespace Standard_Demo_Environment
 
             return await System.Threading.Tasks.Task.Run(() => accountNames);
         }
+
+        public async System.Threading.Tasks.Task<Account> CreateNewAccount(Account account)
+        {
+            Account createdAccount = null;
+
+            try
+            {
+//                var accounts = await AccountStore.PullAsync();
+                createdAccount = await AccountStore.SaveAsync(account);
+                var test=await AccountStore.SaveAsync(new Account("samplename", "sample Company"));
+                var a =await AccountStore.SyncAsync();
+                Console.WriteLine();
+                //createdAccount = await AccountStore.SaveAsync(account);
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+            return await System.Threading.Tasks.Task.Run(() => createdAccount);
+        }
+
+
     }
 }

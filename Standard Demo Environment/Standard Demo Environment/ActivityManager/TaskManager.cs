@@ -66,7 +66,6 @@ namespace Standard_Demo_Environment
             base.OnAddItemClicked(sender, e);
 
             newTask.createNewTask += CreateNewTask;
-
         }
 
         private async void CreateNewTask(object sender, OnAddNewTask e)

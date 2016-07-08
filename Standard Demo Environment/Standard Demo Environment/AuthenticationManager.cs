@@ -24,8 +24,7 @@ namespace Standard_Demo_Environment
                     Logout();
                 }
 
-                var user = await KinveyClient.GetInstance().CurrentUser.LoginAsync("ab", "ab");
-//                var user = await KinveyClient.GetInstance().CurrentUser.LoginAsync(username, password);
+                var user = await KinveyClient.GetInstance().CurrentUser.LoginAsync(username, password);
 
                 if (user != null)
                     return true;
@@ -38,37 +37,10 @@ namespace Standard_Demo_Environment
             }
         }
 
-        public static async System.Threading.Tasks.Task<bool> Login(Activity activity)
+        public static void MICLogin(KinveyMICDelegate<User> micDelegate, string url)
         {
-            var result = false;
-
-           //var url = await KinveyClient.GetInstance().CurrentUser.LoginWithAuthorizationCodeLoginPage("http://localhost:8100");
-           // var uri = Android.Net.Uri.Parse(url);
-           // var intent = new Intent(Intent.ActionView, uri);
-           // activity.StartActivity(intent);
-
-            //KinveyClient.GetInstance().CurrentUser.LoginWithAuthorizationCodeAPI("http://localhost:8100", new KinveyMICDelegate<User>
-            //{
-            //    onSuccess = (user) =>
-            //    {
-            //        result = true;
-            //    },
-            //    onError = (error) =>
-            //    {
-            //        result = false;
-            //    },
-            //    OnReadyToRender = (url) =>
-            //    {
-            //        var uri = Android.Net.Uri.Parse(url);
-            //        var intent = new Intent(Intent.ActionView, uri);
-            //        activity.StartActivity(intent);
-            //    }
-            //});
-
-            return await System.Threading.Tasks.Task.Run(() => result);
+            KinveyClient.GetInstance().CurrentUser.LoginWithAuthorizationCodeLoginPage(url, micDelegate);
         }
-
-
 
         public static bool Logout()
         {
@@ -83,7 +55,7 @@ namespace Standard_Demo_Environment
             }
         }
 
-
+        //sign up
         public bool Signup()
         {
             return true;

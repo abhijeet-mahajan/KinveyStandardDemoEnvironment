@@ -22,6 +22,9 @@ namespace Standard_Demo_Environment
         [JsonProperty("accountname")]
         public string Name { get; set; }
 
+        [JsonProperty("accountcompany")]
+        public string Company { get; set; }
+
         //[JsonProperty]
         //public AccountCompany Company { get; set; }
 
@@ -83,5 +86,14 @@ namespace Standard_Demo_Environment
         [JsonProperty]
         public string Username { get; set; }
 
+        public Account()
+        {
+
+        }
+        public Account(string accountName,string companyName)
+        {
+            Name = accountName;
+            Company = companyName;
+        }
     }
 }
