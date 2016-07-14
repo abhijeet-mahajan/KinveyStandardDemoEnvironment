@@ -147,6 +147,7 @@
     <Compile Include="ActivityManager\Authenticate.cs" />
     <Compile Include="Add New Item\AddNewAccount.cs" />
     <Compile Include="Add New Item\AddNewTask.cs" />
+    <Compile Include="ConnectionManager.cs" />
     <Compile Include="Data\Product.cs" />
     <Compile Include="Data\todo.cs" />
     <Compile Include="ActivityManager\AccountManager.cs" />
@@ -214,6 +215,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_action_add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\kinvey_logo_black.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />

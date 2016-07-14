@@ -12,10 +12,11 @@ using Android.Widget;
 using Android.Support.V7.App;
 using SupportToolBar = Android.Support.V7.Widget.Toolbar;
 using Android.Support.V4.Widget;
+using Android.Net;
 
 namespace Standard_Demo_Environment
 {
-    public class CustomActivity : ActionBarActivity
+    public class CustomActivity : AppCompatActivity
     {
         private SupportToolBar toolbar;
         private ListView optionsDrawer;
@@ -156,6 +157,7 @@ namespace Standard_Demo_Environment
             else
                 Toast.MakeText(this, "Logout Failed", ToastLength.Short).Show();
         }
+
 
     }
 }

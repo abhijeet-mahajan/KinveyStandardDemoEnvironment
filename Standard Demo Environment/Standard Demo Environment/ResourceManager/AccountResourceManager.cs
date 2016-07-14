@@ -11,48 +11,49 @@ using Android.Views;
 using Android.Widget;
 using KinveyXamarin;
 using SQLite.Net.Platform.XamarinAndroid;
+using Android.Net;
 
 namespace Standard_Demo_Environment
 {
     public class AccountResourceManager
     {
-        public DataStore<Account> AccountStore
+        private DataStore<Account> _store;
+
+        private DataStore<Account> GetAccountStore()
         {
-            get
-            {
-                var store = DataStore<Account>.GetInstance(DataStoreType.SYNC, "Account", KinveyClient.GetInstance());
-                //                store.setOffline(null);
-                return store;
-            }
+            if (_store != null)
+                return _store;
+            _store = DataStore<Account>.GetInstance(DataStoreType.SYNC, "Account", KinveyClient.GetInstance());
+            return _store;
         }
 
         public async System.Threading.Tasks.Task<List<string>> GetAllAccountNames()
         {
             List<string> accountNames = new List<string>();
+            List<Account> accounts;
 
             try
             {
-                //KinveyObserver<Account> observer = new KinveyObserver<Account>()
-                //{
-                //    onSuccess = (accounts) =>
-                //    {
-                //        foreach (var account in accounts)
-                //            accountNames.Add(account.Name);
-                //    },
-                //    onError = (e) => Console.WriteLine(e.Message),
-                //    onCompleted = () => Console.WriteLine("completed")
-                //};
-                //await AccountStore.FindAsync(observer);
-
-                var accounts = await AccountStore.PullAsync();
-
+                var response = await GetAccountStore().SyncAsync();
+                accounts = await GetAccountStore().PullAsync();
                 foreach (var account in accounts)
                     accountNames.Add(account.Name);
-
             }
-            catch (Exception e)
+            catch (Exception ex)
             {
-                Console.WriteLine("Something went wrong : " + e.StackTrace);
+                KinveyObserver<Account> observer = new KinveyObserver<Account>()
+                {
+                    onSuccess = (offlineAccounts) =>
+                    {
+                        foreach (var account in offlineAccounts)
+                            accountNames.Add(account.Name);
+                    },
+                    onError = (e) => Console.WriteLine(e.Message),
+                    onCompleted = () => Console.WriteLine("completed")
+                };
+
+                await GetAccountStore().FindAsync(observer);
+
             }
 
             return await System.Threading.Tasks.Task.Run(() => accountNames);
@@ -64,11 +65,17 @@ namespace Standard_Demo_Environment
 
             try
             {
-//                var accounts = await AccountStore.PullAsync();
-                createdAccount = await AccountStore.SaveAsync(account);
-                var response =await AccountStore.SyncAsync();
-                Console.WriteLine();
-                //createdAccount = await AccountStore.SaveAsync(account);
+                //                var accounts = await AccountStore.PullAsync();
+                createdAccount = await GetAccountStore().SaveAsync(account);
+
+                try
+                {
+                    var response = await GetAccountStore().SyncAsync();
+                }
+                catch
+                {
+                    //                    Toast.MakeText(this,"No Internet Access!! Data Saved Locally",ToastLength.Short).Show();
+                }
             }
             catch (Exception e)
             {
