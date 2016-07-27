@@ -12,6 +12,7 @@ using Android.Widget;
 using KinveyXamarin;
 using System.Collections.Specialized;
 using SQLite.Net.Platform.XamarinAndroid;
+using KinveyXamarinAndroid;
 
 namespace Standard_Demo_Environment
 {
@@ -30,10 +31,11 @@ namespace Standard_Demo_Environment
                 kinveyClient = new Client.Builder(appkey, appSecret)
                                 .setFilePath(path)
                                 .setOfflinePlatform(new SQLitePlatformAndroid())
+                                .SetProjectId("906362008503")
                                 .build();
 
                 kinveyClient.MICApiVersion = "v2";
-
+                kinveyClient.Push().Initialize(Android.App.Application.Context);
             }
             return kinveyClient;
 

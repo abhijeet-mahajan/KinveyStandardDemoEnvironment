@@ -65,9 +65,7 @@ namespace Standard_Demo_Environment
 
             try
             {
-                //                var accounts = await AccountStore.PullAsync();
                 createdAccount = await GetAccountStore().SaveAsync(account);
-
                 try
                 {
                     var response = await GetAccountStore().SyncAsync();

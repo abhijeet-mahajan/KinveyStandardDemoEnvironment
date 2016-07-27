@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Standard_Demo_Environment.Standard_Demo_Environment" android:versionCode="1" android:versionName="1.0">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.standarddemoenvironment" android:versionCode="1" android:versionName="1.0" android:installLocation="preferExternal">
   <!--suppress UsesMinSdkAttributes-->
   <uses-sdk android:minSdkVersion="16" />
   <uses-permission android:name="android.permission.INTERNET" />
+  <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+  <uses-permission android:name="android.permission.WAKE_LOCK" />
+  <uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+  <uses-permission android:name="com.google.android.c2dm.intent.REGISTRATION" />
+  <permission android:name="com.standarddemoenvironment.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+  <uses-permission android:name="com.standarddemoenvironment.permission.C2D_MESSAGE" />
   <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
   <application android:label="Standard_Demo_Environment" android:name="mono.android.app.Application" android:allowBackup="true" android:icon="@drawable/icon" android:debuggable="true">
     <meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
@@ -23,12 +29,27 @@
     <activity android:icon="@drawable/icon" android:label="Home" android:theme="@style/MyTheme" android:name="md53495476648710d071d2a33b732732185.Home" />
     <activity android:label="Products" android:theme="@style/MyTheme" android:name="md53495476648710d071d2a33b732732185.ProductManager" />
     <activity android:label="Tasks" android:theme="@style/MyTheme" android:name="md53495476648710d071d2a33b732732185.TaskManager" />
-    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="Standard_Demo_Environment.Standard_Demo_Environment.mono.MonoRuntimeProvider.__mono_init__" />
+    <service android:name="md53495476648710d071d2a33b732732185.PushNotificationService" />
+    <receiver android:permission="com.google.android.c2dm.permission.SEND" android:name="md5f036b4afe74517eb3e0ab3ee1710c087.SDEBroadcastReceiver">
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.c2dm.intent.REGISTRATION" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.google.android.gcm.intent.RETRY" />
+      </intent-filter>
+      <intent-filter>
+        <action android:name="com.kinvey.xamarin.android.ERROR" />
+      </intent-filter>
+    </receiver>
+    <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.standarddemoenvironment.mono.MonoRuntimeProvider.__mono_init__" />
     <!--suppress ExportedReceiver-->
     <receiver android:name="mono.android.Seppuku">
       <intent-filter>
         <action android:name="mono.android.intent.action.SEPPUKU" />
-        <category android:name="mono.android.intent.category.SEPPUKU.Standard_Demo_Environment.Standard_Demo_Environment" />
+        <category android:name="mono.android.intent.category.SEPPUKU.com.standarddemoenvironment" />
       </intent-filter>
     </receiver>
   </application>

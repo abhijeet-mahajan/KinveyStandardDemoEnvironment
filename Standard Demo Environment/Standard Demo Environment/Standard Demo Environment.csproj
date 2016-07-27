@@ -156,6 +156,8 @@
     <Compile Include="ActivityManager\Home.cs" />
     <Compile Include="ActivityManager\ProductManager.cs" />
     <Compile Include="ActivityManager\TaskManager.cs" />
+    <Compile Include="Engagement\PushNotificationService.cs" />
+    <Compile Include="Engagement\SDEBroadcastReceiver.cs" />
     <Compile Include="ResourceManager\AccountResourceManager.cs" />
     <Compile Include="AuthenticationManager.cs" />
     <Compile Include="KinveyClient.cs" />
@@ -219,6 +221,7 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\kinvey_logo_black.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
   <Import Project="..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets" Condition="Exists('..\packages\Microsoft.Bcl.Build.1.0.21\build\Microsoft.Bcl.Build.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -10,14 +10,13 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Newtonsoft.Json;
+using KinveyXamarin;
 
 namespace Standard_Demo_Environment
 {
     [JsonObject]
-    public class Product
+    public class Product : KinveyObject
     {
-        [JsonProperty("_id")]
-        public string Id { get; set; }
 
         [JsonProperty]
         public string Description { get; set; }

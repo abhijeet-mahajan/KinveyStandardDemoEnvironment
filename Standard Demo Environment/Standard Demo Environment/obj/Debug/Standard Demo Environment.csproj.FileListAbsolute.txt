@@ -57,8 +57,8 @@ D:\Workspace\Xamarin\Standard Demo Environment\Standard Demo Environment\bin\Deb
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.dll.config
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.dll
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard Demo Environment.pdb
-D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard_Demo_Environment.Standard_Demo_Environment.apk
-D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Standard_Demo_Environment.Standard_Demo_Environment-Signed.apk
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\com.standarddemoenvironment.apk
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\com.standarddemoenvironment-Signed.apk
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Kinvey-Utils.dll
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Kinvey-Xamarin-Android.dll
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\Kinvey-Xamarin.dll
@@ -91,7 +91,7 @@ D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo 
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\bin\Debug\System.Net.Http.Primitives.xml
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.dll
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\Standard Demo Environment.pdb
-D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\android\bin\Standard_Demo_Environment.Standard_Demo_Environment.apk
+D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\android\bin\com.standarddemoenvironment.apk
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\accountmanager.xml
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\productmanager.xml
 D:\Kinvey Standard Demo Environment\KinveyStandardDemoEnvironment\Standard Demo Environment\Standard Demo Environment\obj\Debug\res\layout\taskmanager.xml

@@ -1,0 +1,13 @@
+﻿<Properties StartupItem="Standard Demo Environment\Standard Demo Environment.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Demo" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Standard Demo Environment\AuthenticationManager.cs">
+    <Files>
+      <File FileName="Standard Demo Environment\ConnectionManager.cs" Line="1" Column="1" />
+      <File FileName="Standard Demo Environment\AuthenticationManager.cs" Line="9" Column="18" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

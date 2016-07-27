@@ -15,13 +15,15 @@ namespace Standard_Demo_Environment
 {
     public class TaskResourceManager
     {
-        public DataStore<todo> TaskStore
+        private DataStore<todo> _store;
+
+        private DataStore<todo> GetTaskStore()
         {
-            get
-            {
-                var task= DataStore<todo>.GetInstance(DataStoreType.NETWORK, "todo", KinveyClient.GetInstance());
-                return task;
-            }
+            if (_store != null)
+                return _store;
+
+            _store = DataStore<todo>.GetInstance(DataStoreType.SYNC, "todo", KinveyClient.GetInstance());
+            return _store;
         }
 
         public async System.Threading.Tasks.Task<List<string>> GetAllTaskTitles()
@@ -30,17 +32,10 @@ namespace Standard_Demo_Environment
 
             try
             {
-                KinveyObserver<todo> observer = new KinveyObserver<todo>()
-                {
-                    onSuccess = (tasks) => {
-                        foreach (var task in tasks)
-                            taskTitles.Add(task.Title);
-                    },
-                    onError = (e) => Console.WriteLine(e.Message),
-                    onCompleted = () => Console.WriteLine("completed")
-                };
-
-                await TaskStore.FindAsync(observer);
+                var response = await GetTaskStore().SyncAsync();
+                var tasks = await GetTaskStore().PullAsync();
+                foreach (var task in tasks)
+                    taskTitles.Add(task.Action);
             }
             catch (Exception e)
             {
@@ -55,14 +50,14 @@ namespace Standard_Demo_Environment
 
             try
             {
-                createdTask = await TaskStore.SaveAsync(task);
+                createdTask = await GetTaskStore().SaveAsync(task);
+                var response = await GetTaskStore().SyncAsync();
             }
-            catch (Exception e)
+            catch
             {
                 return null;
             }
-            return await System.Threading.Tasks.Task.Run(() => createdTask);
+            return createdTask;
         }
-
     }
 }

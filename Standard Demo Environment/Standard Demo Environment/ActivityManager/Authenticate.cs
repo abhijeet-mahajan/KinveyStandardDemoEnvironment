@@ -81,7 +81,7 @@ namespace Standard_Demo_Environment
             var micDelegate = new KinveyMICDelegate<User>
             {
                 onSuccess = (user) => {},
-                onError = (exception) => { AfterLoginFailed(); },
+                onError = (exception) => {  },//AfterLoginFailed();
                 onReadyToRender = (renderURL) =>
                 {
                     var uri = Android.Net.Uri.Parse(renderURL);

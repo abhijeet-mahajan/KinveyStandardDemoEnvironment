@@ -1,5 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="Standard_Demo_Environment.Standard_Demo_Environment" android:versionCode="1" android:versionName="1.0">
-  <uses-sdk android:minSdkVersion="16" />
-  <application android:label="Standard_Demo_Environment"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.standarddemoenvironment" android:versionCode="1" android:versionName="1.0" android:installLocation="preferExternal">
+	<uses-sdk android:minSdkVersion="16" />
+	<uses-permission android:name="android.permission.INTERNET" />
+	<uses-permission android:name="android.permission.GET_ACCOUNTS" />
+	<uses-permission android:name="android.permission.WAKE_LOCK" />
+	<uses-permission android:name="android.permission.RECEIVE_WAP_PUSH" />
+	<uses-permission android:name="com.google.android.c2dm.intent.REGISTRATION" />
+	<permission android:name="com.standarddemoenvironment.permission.C2D_MESSAGE" android:protectionLevel="signature" />
+	<uses-permission android:name="com.standarddemoenvironment.permission.C2D_MESSAGE" />
+	<application android:label="Standard_Demo_Environment"></application>
 </manifest>

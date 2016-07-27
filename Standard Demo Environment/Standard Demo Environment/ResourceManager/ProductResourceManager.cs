@@ -15,12 +15,17 @@ namespace Standard_Demo_Environment
 {
     public class ProductResourceManager
     {
-        public DataStore<Product> ProductStore
+        public DataStore<Product> _store;
+
+        private DataStore<Product> GetProductStore()
         {
-            get
+            if (_store != null)
             {
-                return DataStore<Product>.GetInstance(DataStoreType.NETWORK, "Products", KinveyClient.GetInstance());
+                return _store;
             }
+            _store = DataStore<Product>.GetInstance(DataStoreType.SYNC, "Products", KinveyClient.GetInstance());
+            return _store;
+
         }
 
         public async System.Threading.Tasks.Task<List<string>> GetAllProductNames()
@@ -29,17 +34,10 @@ namespace Standard_Demo_Environment
 
             try
             {
-                KinveyObserver<Product> observer = new KinveyObserver<Product>()
-                {
-                    onSuccess = (products) => {
-                        foreach (var product in products)
-                            productNames.Add(product.Title);
-                    },
-                    onError = (e) => Console.WriteLine(e.Message),
-                    onCompleted = () => Console.WriteLine("completed")
-                };
-
-                await ProductStore.FindAsync(observer);
+                var response = await GetProductStore().SyncAsync();
+                var products = await GetProductStore().PullAsync();
+                foreach (var product in products)
+                    productNames.Add(product.Title);
             }
             catch (Exception e)
             {
